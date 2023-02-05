@@ -4,10 +4,3 @@
 #market {
 	display: none;
 }
-@media only screen and (max-width: 1000px) {
-	.navbar{
-		padding: 0 15px;
-		height: 80px;
-		line-height: 80px;
-	}
-}
