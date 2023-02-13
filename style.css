@@ -1,10 +1,34 @@
-*{ margin:0; padding:0}
+*{ margin:0; padding:0; }
+html{
+	background-color: grey;
+}
 
 #stock {
 	display: none;
 }
 #market {
 	display: none;
+}
+
+body {
+	background-color: grey;
+}
+.line {
+	border-left: 6px solid black;
+	height: 800px;
+	position: absolute;
+	left: 25%;
+	margin-left: -3px;
+	top: 0;
+	margin-top: 56px;
+}
+#rock{
+	border-style: solid;
+	border-color: black;
+	border-radius: 70%;
+	margin-left: 45px;
+	bottom: 150px;
+	margin-top: 50px;
 }
 #main {
 	background-color: grey;

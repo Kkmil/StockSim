@@ -29,14 +29,23 @@
 	<div id="main">
 		<div id="inventory">
 					<a id="mining">
-					<img id="rock" src="rock.jpg" width="200px" height="150px">
+					<img id="rock" src="dolar.jpg" width="200px" height="180px" >
 					</a>
+		<div class="line"></div>
 		</div>
 			<div id="stock">
-
-				<button id="sell" onclick="sell()">Sell All</button>
-				<button id="first" onclick="upgrade()">Upgrade your Pick (50$)</button>
+				<div class="btn-group">
+				  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Sell
+				  </button>
+				  <div class="dropdown-menu">
+					<a id="s1" class="dropdown-item" href="#" onclick="Ornel()">Ornel</a>
+					<a id="s2" class="dropdown-item" href="#" onclick="Reser()">Reser</a>
+					<a id="s3" class="dropdown-item" href="#" onclick="BmB()">BmB</a>
+					<a id="s4" class="dropdown-item" href="#" onclick="SiP">SiP</a>
+				  </div>
 				</div>
+			</div>
 				<div id="market">
 					<p>XXXXXXXXX</p>
 				</div>
