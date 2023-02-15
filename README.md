@@ -44,7 +44,7 @@ Dodanie sprzedaży w funkcji alertu ("Ile chcesz sprzedać")
 
 Wykresy z cenami w czasie
 
-zapis stanu gry w localstorage
+✅ zapis stanu gry w localstorage ✅
 
 <!--
 **Kkmil/Kkmil** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
