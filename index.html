@@ -28,24 +28,41 @@
 	</nav>
 	<div id="main">
 		<div id="inventory">
-					<a id="mining">
-					<img id="rock" src="dolar.jpg" width="200px" height="180px" >
-					</a>
-		<div class="line"></div>
-		</div>
-			<div id="stock">
-				<div class="btn-group">
-				  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					Sell
-				  </button>
-				  <div class="dropdown-menu">
-					<a id="s1" class="dropdown-item" href="#" onclick="Ornel()">Ornel</a>
-					<a id="s2" class="dropdown-item" href="#" onclick="Reser()">Reser</a>
-					<a id="s3" class="dropdown-item" href="#" onclick="BmB()">BmB</a>
-					<a id="s4" class="dropdown-item" href="#" onclick="SiP">SiP</a>
-				  </div>
+			<div class="row">
+				<a id="mining">
+				<img id="rock" src="dolar.jpg" width="200px" height="180px" >
+				</a>
+			<div class="line"></div>
+			  <div class="column">
+				<div class="container">
+					<img src="Orren.png" class="image">
+					<div class="overlay"> Stocks: <span id="Orren" class="navbar-text">0</span></div>
 				</div>
+			  </div>
+			  <div class="column">
+				<div class="container">
+					<img src="ymy.jpg" class="image">
+					<div class="overlay"> Stocks: <span id="YmY" class="navbar-text">0</span></div>
+				</div>
+			 </div>
 			</div>
+			<hr>
+		</div>
+		
+
+		<div id="stock">
+			<div class="btn-group">
+				 <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Sell
+				 </button>
+				 <div class="dropdown-menu">
+				<a id="s1" class="dropdown-item" href="#" onclick="Orren()">Orren<span id="Oprice" class="navbar-text"></span></a>
+				<a id="s2" class="dropdown-item" href="#" onclick="Reser()">Reser</a>
+				<a id="s3" class="dropdown-item" href="#" onclick="YmY()">YmY: <span id="Yprice" class="navbar-text"></span></a>
+				<a id="s4" class="dropdown-item" href="#" onclick="SiP">SiP</a>
+				 </div>
+			</div>
+		</div>
 				<div id="market">
 					<p>XXXXXXXXX</p>
 				</div>

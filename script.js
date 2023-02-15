@@ -3,30 +3,63 @@ var y = document.getElementById("market");
 var z = document.getElementById("inventory");
 const button = document.getElementById("mining");
 
-
-var money = 0;
+var House = parseInt(localStorage.getItem('House'),10) || 0;
+var money =parseInt(localStorage.getItem('money'),10) || 0;
 var actionperclick =1;
-let firsti = false;
-let second = false;
-let third = false;
-let four = false;
-var Ornel = 0;
-var Reser = 0;
-var BmB = 0;
-var SiP = 0;
-
-var laneArr = [Ornel, Reser, BmB, SiP];
+var Orren = parseInt(localStorage.getItem('Orren'),10) || 0;
+var Reser = parseInt(localStorage.getItem('Reser'),10) || 0;
+var YmY = parseInt(localStorage.getItem('YmY'),10) || 0;
+var SiP = parseInt(localStorage.getItem('SiP'),10) || 0;
+var Oprice = parseInt(localStorage.getItem('Oprice'),10) || 15;
+var Yprice = parseInt(localStorage.getItem('Yprice'),10) || 10;
+var laneArr = [Orren, Reser, YmY, SiP];
 var b1 = document.getElementById('s1');
 var b2 = document.getElementById('s2');
 var b3 = document.getElementById('s3');
 var b4 = document.getElementById('s4');
 
-
-const textHolder = document.getElementById("stone");
+const OpriceHolder = document.getElementById("Oprice");
+const YpriceHolder = document.getElementById("Yprice");
+const orrenHolder = document.getElementById("Orren");
+const ymyHolder = document.getElementById("YmY");
 const moneyHolder = document.getElementById("money");
+
+save();
+function idle() {
+	if (House>=1) {
+		money = money + House;
+		updateinv();
+		setInterval(idle, 1000);
+}
+updateinv();
+
+}
+idle();
+
+function price() {
+	random = Math.floor(Math.random() * 4)
+	var y = Math.random();
+	if (Oprice >= 0)
+		
+		if (y < 0.5)
+			Oprice -= random;
+		else
+			Oprice += random;
+	updateinv();
+	random = Math.floor(Math.random() * 4)
+	var y = Math.random();
+	if (Yprice >= 0)
+		if (y < 0.5)
+			Yprice -= random;
+		else
+			Yprice += random;
+	updateinv();
+	save();
+}
+
 b1.onclick = function () { 
-	money = money + Ornel;
-	Ornel = Ornel - Ornel;
+	money = money + (Orren * Oprice);
+	Orren = Orren - Orren;
 	updateinv();
 };
 b2.onclick = function () { 
@@ -35,8 +68,8 @@ b2.onclick = function () {
 	updateinv();
 };
 b3.onclick = function () { 
-	money = money + Bmb;
-	Bmb = Bmb - Bmb;
+	money = money + (YmY * Yprice);
+	YmY = YmY - YmY;
 	updateinv();
 };
 b4.onclick = function () { 
@@ -77,28 +110,25 @@ function market() {
   }
   
 }
-function sell() {
-	if (stone > 0) {
-		money = money + stone;
-		stone = stone - stone;
-	} else {
-	}
-	updateinv();
-}
+
 button.addEventListener(
   'click',
   function() {
 	var random = Math.floor(Math.random() * laneArr.length)
-	if (random == 0) { Ornel += actionperclick;}
+	if (random == 0) {Orren += actionperclick;}
 	if (random == 1) {Reser += actionperclick};
-	if (random == 2) {BmB += actionperclick};
+	if (random == 2) {YmY += actionperclick};
 	if (random == 3) {SiP += actionperclick};
-	console.log(Ornel,Reser,BmB,SiP)
+	console.log(Orren,Reser,YmY,SiP)
+	updateinv();
   }
 )
 
 function updateinv() {
-	textHolder.innerHTML = Ornel;
+	orrenHolder.innerHTML = Orren;
+	ymyHolder.innerHTML = YmY;
+	YpriceHolder.innerHTML = Yprice;
+	OpriceHolder.innerHTML = Oprice;
 	moneyHolder.innerHTML = money + "$";
 }
 function upgrade() {
@@ -128,5 +158,18 @@ function upgrade() {
 	}
 	updateinv();
 }
-		
+function save() {
+	localStorage.setItem('House',House)
+	localStorage.setItem('money',money)
+	localStorage.setItem('Orren',Orren)
+	localStorage.setItem('Reser',Reser)
+	localStorage.setItem('YmY',YmY)
+	localStorage.setItem('SiP',SiP)
+	localStorage.setItem('Oprice',Oprice)
+	localStorage.setItem('Yprice',Yprice)
+}
+	
+	
+setInterval(price, 10000);
+
 		

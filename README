@@ -1,0 +1,58 @@
+Alpha (v):
+0.12
+Naprawa togglera
+0.13
+Dostosowanie pod urządzenia mobilne
+0.14
+Zmieniono pozycje głównych statystyk
+zmieniono wartości
+dodano pierwszy upgrade
+zmieniono przycisk "sell 1" na "sell all"
+0.15
+Zmieniono koncept gry
+Przebudowa funkcji 
+v0.16
+Dodano wyswietlanie nazw spolek i ilosci posiadanych akcji
+wprowadzono pierwszy pasywny dochód - Dom maklerski
+Wprowadzono zmieniajce się ceny akcji poszczególnych spółek
+
+Todo list:
+Zakup domu maklerskiego
+Balans gotówki 
+Dodanie większej ilości spółek z logo
+Poprawa wizualności
+Dodanie sprzedaży w funkcji alertu ("Ile chcesz sprzedać")
+Wykresy z cenami w czasie
+zapis stanu gry w localstorage
+
+
+
+
+
+
+
+
+
+
+
+Dopasowanie do mobilek
+
+
+
+Zamiast rocka klikamy losowe akcje spółki np po 0.01 do balansu
+W markecie możemy zainwestowac w dom maklerski 
+system dni (może i godziny; wtedy godziny otwarcia i zamkniecia gieldy)
+dom maklerski codziennie zarabia x
+spółka może wyjebać do góry a może wjebać się w totalny dołek ale róznice maks o +-15$  zielony czerwony kolor wzrost/spadek w stosunku do poprzedniego dnia
+im wiecej maklerów tym więcej przychodu ale trzeba każdego opłacić co x dni
+wykresy notowań !!!!!!!
+
+random eventy typu Orlen opublikował sprawozdanie 100mld zysku na czysto = wzrost o np 20$ akcji
+Musk dodał kolejny tweet spadek akcji twittera wzrost na tesli
+Friz w basenie z kulkami spadek akcji ekipy
+
+
+Być może strona główna i wybór między 2 grami XD
+
+
+
