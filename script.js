@@ -17,7 +17,9 @@ var b1 = document.getElementById('s1');
 var b2 = document.getElementById('s2');
 var b3 = document.getElementById('s3');
 var b4 = document.getElementById('s4');
-
+var i = 0;
+const arrayOrrenX = [0,2];
+const arrayOrrenY = [1,2];
 const OpriceHolder = document.getElementById("Oprice");
 const YpriceHolder = document.getElementById("Yprice");
 const orrenHolder = document.getElementById("Orren");
@@ -39,22 +41,23 @@ idle();
 function price() {
 	random = Math.floor(Math.random() * 4)
 	var y = Math.random();
-	if (Oprice >= 0)
-		
-		if (y < 0.5)
+		if  (y < 0.5)
 			Oprice -= random;
 		else
 			Oprice += random;
 	updateinv();
 	random = Math.floor(Math.random() * 4)
 	var y = Math.random();
-	if (Yprice >= 0)
 		if (y < 0.5)
 			Yprice -= random;
 		else
 			Yprice += random;
+	arrayOrrenY.push(Yprice);
+	arrayOrrenX.push(i);
+	i += 1;
 	updateinv();
 	save();
+	updateChart();
 }
 
 b1.onclick = function () { 
@@ -168,8 +171,33 @@ function save() {
 	localStorage.setItem('Oprice',Oprice)
 	localStorage.setItem('Yprice',Yprice)
 }
-	
-	
-setInterval(price, 10000);
 
-		
+setInterval(price, 15000);
+
+
+
+
+function updateChart() {
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: arrayOrrenX,
+    datasets: [{
+      fill: false,
+      lineTension: 0,
+      backgroundColor: "rgba(120,0,255,1.0)",
+      borderColor: "rgba(130,50,255,1.0)",
+      data: arrayOrrenY
+    }]
+  },
+  options: {
+    legend: {display: false},
+    scales: {
+      yAxes: [{ticks: {min: -10, max:60}}],
+    }
+  }
+});
+}
+
+
+
